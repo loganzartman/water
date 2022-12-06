@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { hot } from '@use-gpu/live';
 import { AutoCanvas, WebGPU } from '@use-gpu/webgpu';
 import { Overlay } from './Overlay';
 import { HTML } from '@use-gpu/react';
@@ -9,7 +9,7 @@ const makeFallback = (error: Error) =>
     <p>{error.toString()}</p>
   </div>
 
-export const App = () => {
+export const App = hot(() => {
   const rootEl = document.querySelector('#root');
   const canvasEl = document.querySelector('#root .canvas');
 
@@ -25,4 +25,4 @@ export const App = () => {
       </AutoCanvas>
     </WebGPU>
   )
-};
+}, module);

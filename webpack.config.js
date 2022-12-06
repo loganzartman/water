@@ -9,7 +9,7 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: [
     './src/index.tsx',
-    // 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
+    'webpack-dev-server/client/index.js?hot=true&live-reload=true',
   ],
   experiments: {
     // enable wasm
