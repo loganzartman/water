@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>loganz water</title>
-  <style type="text/css">
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overscroll-behavior-x: none;
-      overflow: hidden;
-      font-family: sans-serif;
-    }
-    #root, #root .canvas, #root .overlay {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-    }
-    .error-modal {
-      position: relative;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      top: 2em;
-      border: 0.1em solid black;
-      border-radius: 1em;
-      padding: 1em;
-    }
-  </style>
-</head>
-<body>
-  <div id="root">
-    <div class="canvas"></div>
-    <div class="overlay"></div>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loganz water</title>
+    <style type="text/css">
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overscroll-behavior-x: none;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+      #root,
+      .canvas,
+      .overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      .overlay {
+        user-select: none;
+      }
+      .error-modal {
+        position: relative;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        top: 2em;
+        border: 0.1em solid black;
+        border-radius: 1em;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="canvas"></div>
+      <div class="overlay"></div>
+    </div>
+  </body>
 </html>
