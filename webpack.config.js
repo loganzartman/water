@@ -6,13 +6,29 @@ module.exports = {
     hot: true,
     port: 9000,
   },
-  entry: './src/index.ts',
+  devtool: 'inline-source-map',
+  entry: [
+    './src/index.tsx',
+    // 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
+  ],
+  experiments: {
+    // enable wasm
+    asyncWebAssembly: true,
+  },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.wasm$/i,
+        type: 'webassembly/async',
+      },
+      {
+        test: /\.wgsl$/i,
+        use: ['@use-gpu/wgsl-loader'],
       },
     ],
   },
@@ -23,10 +39,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'loganz water'
-    })
+      template: './src/index.html',
+    }),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+  },
+  watchOptions: {
+    poll: 500,
   },
 };
