@@ -24,6 +24,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@use-gpu/core": "^0.7.0",
     "@use-gpu/live": "^0.7.0",
     "@use-gpu/react": "^0.7.0",
     "@use-gpu/traits": "^0.7.0",

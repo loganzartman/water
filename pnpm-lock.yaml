@@ -4,6 +4,7 @@ specifiers:
   '@types/node': ^18.11.11
   '@types/react': ^18.0.26
   '@types/react-dom': ^18.0.9
+  '@use-gpu/core': ^0.7.0
   '@use-gpu/live': ^0.7.0
   '@use-gpu/react': ^0.7.0
   '@use-gpu/traits': ^0.7.0
@@ -20,6 +21,7 @@ specifiers:
   webpack-dev-server: ^4.11.1
 
 dependencies:
+  '@use-gpu/core': 0.7.0_react@18.2.0
   '@use-gpu/live': 0.7.0
   '@use-gpu/react': 0.7.0_biqbaboplfbrettd7655fr4n2y
   '@use-gpu/traits': 0.7.0
